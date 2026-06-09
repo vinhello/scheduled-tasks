@@ -57,7 +57,7 @@ if today in birthdays_dict:
             connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(
-                from_addr=MY_PASSWORD,
+                from_addr=MY_EMAIL,
                 to_addrs=f"{person_email}",
                 msg=f"Subject: Happy Birthday!\n\n{updated_letter}"
             )
