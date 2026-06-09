@@ -50,6 +50,7 @@ if today in birthdays_dict:
 
     # replace [NAME] with name; using .replace() must be saved to a new variable
     updated_letter = letter.replace("[NAME]", person_name)
+    print(updated_letter)
 
     # send email
     try:
