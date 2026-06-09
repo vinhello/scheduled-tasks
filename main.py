@@ -61,6 +61,7 @@ if today in birthdays_dict:
                 to_addrs=f"{person_email}",
                 msg=f"Subject: Happy Birthday!\n\n{updated_letter}"
             )
+            print("Email successfully sent.")
     except Exception as e:
         print(f"Failed to send email. Error: {e}")
     else:
