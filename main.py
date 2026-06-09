@@ -30,9 +30,15 @@ try:
 except FileNotFoundError:
     print("File not found.")
     sys.exit(1)
+# Exact data mapping block for your main.py file
 else:
-    birthdays_dict = {(row.month, row.day): row for (index, row) in data_frame.iterrows()}
-    print(birthdays_dict)
+    birthdays_dict = {
+        (int(row["month"]), int(row["day"])): {
+            "name": str(row["name"]),
+            "email": str(row["email"])
+        }
+        for (index, row) in data_frame.iterrows()
+    }
 
 # match today's date with any birthdays in birthdays_dict
 if today in birthdays_dict:
