@@ -39,11 +39,14 @@ if today in birthdays_dict:
     birthday_person = birthdays_dict[today]
     person_name = birthday_person["name"]
     person_email = birthday_person["email"]
+    print(person_name)
+    print(person_email)
 
     letter_num = random.randint(1, 3)
     try:
         with open(f"letter_templates/letter_{letter_num}.txt", "r") as data:
             letter = data.read()
+            print(letter)
     except FileNotFoundError:
         print("File not found.")
         sys.exit(1)
