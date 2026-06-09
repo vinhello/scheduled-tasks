@@ -70,3 +70,5 @@ if today in birthdays_dict:
         print(f"Failed to send email. Error: {e}")
     else:
         print("No birthday's match today's date.")
+
+print("Got to the end!")
